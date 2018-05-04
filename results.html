@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Search Results</title>
+
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var query = new URL(window.location.href).searchParams.get('query');
+        $("#query").text(query);
+        if (query === 'happiness') {
+          $('#manyresults').show();
+        } else {
+          $('#noresult').show();
+        }
+      });
+    </script>
+    <style>
+        .dynamic-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div align="middle">
+    <p>
+        Search for <strong><span id="query"></span></strong>
+    </p>
+    <p id="noresult" class="dynamic-content">
+        No result... :-(
+    </p>
+    <p id="manyresults" class="dynamic-content">
+        Plenty of results! :-)
+    </p>
+</div>
+
+</body>
+</html>
