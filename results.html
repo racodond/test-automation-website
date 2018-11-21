@@ -9,9 +9,9 @@
         var query = new URL(window.location.href).searchParams.get('query');
         $("#query").text(query);
         if (query === 'happiness') {
-          $('#manyresults').show();
+          $('#many-results').show();
         } else {
-          $('#noresult').show();
+          $('#no-results').show();
         }
       });
     </script>
@@ -27,10 +27,10 @@
     <p>
         Search for <strong><span id="query"></span></strong>
     </p>
-    <p id="noresult" class="dynamic-content">
-        No result... :-(
+    <p id="no-results" class="dynamic-content">
+        No results... :-(
     </p>
-    <p id="manyresults" class="dynamic-content">
+    <p id="many-results" class="dynamic-content">
         Plenty of results! :-)
     </p>
 </div>
